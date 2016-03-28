@@ -10,16 +10,16 @@
  */
 angular
   .module('cineMaxApp', [
-    'ngRoute'
+      'ui.bootstrap','ngRoute'
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+      .when('/popular', {
+        templateUrl: 'views/popular.html',
+        controller: 'PopularCtrl',
+        controllerAs: 'popular'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/popular'
       });
   });
